@@ -1,0 +1,63 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container-fluid {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    height: 100vh; /* Full height of the viewport */
+    width: 80px; /* Adjust width as needed */
+    border-right: 1px solid #444; /* Optional border for visual separation */
+    overflow-y: auto; /* Allow scrolling within the navbar if needed */
+    z-index: 1000; /* Ensure navbar is on top of other content */
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.nav-item {
+    margin: 0.5rem 0; /* Space between items */
+}
+
+.nav-link {
+    color: white;
+    font-size: 1.5rem; /* Adjust icon size */
+    text-decoration: none;
+    display: block; /* Ensure links fill the width of the navbar */
+    padding: 0.5rem 1rem; /* Add padding for better click area */
+    border-radius: 0.25rem; /* Rounded corners for active state background */
+}
+
+.nav-link.active {
+    background-color: #333; /* Active link background */
+   
+}
+
+.nav-link.active i {
+    color: white; /* Change icon color to white when active */
+}
+
+.nav-link i {
+    color: white; /* Default icon color */
+}
+
+main {
+    flex: 1; /* Take remaining space */
+    padding: 1rem;
+    overflow-y: auto; /* Allow scrolling if content exceeds viewport */
+}

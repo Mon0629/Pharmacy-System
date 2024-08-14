@@ -1,0 +1,40 @@
+<br>
+<div class="container">
+    <table class="table table-responsive table-striped border-dark">
+      <thead class="table-dark">
+        <tr>
+          <th>Picture</th>
+          <th>Name</th>
+          <th>Dosage</th>
+          <th>Category</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Qty</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>
+            <img [src]="product.base64Image ? 'data:image/jpeg;base64,' + product.base64Image : ''" alt="Product Image" style="width: 100px; height: auto;">
+          </td>
+          <td>{{ product.name }}</td>
+          <td>{{product.dosage}}</td>
+          <td>{{ product.category }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.price | currency }}</td>
+
+          <td>
+            <input type="number" min="1" max="100" step="1" style="width: 50px;">
+          </td>
+
+          <td>
+            <button class="btn btn-success">
+                <i class="fas fa-cart-plus"></i> 
+              </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
