@@ -1,47 +1,64 @@
 <div class="container">
     <div class="left-div">
-        <div class="card-container">
-            <div class="card" *ngFor="let product of products">
-                <img src="data:image/jpeg;base64,{{product.base64Image}}" class="card-img" alt="{{product.name}}">
-                <div class="card-body">
-                    <h5 class="card-title">{{product.name}}</h5>
-                    <p class="card-text">{{product.dosage}}</p>
-                    <p class="card-text"><strong>${{product.price}}</strong></p>
-
-                    <div class="d-flex justify-content-center">
-                        <button class="btn btn-success full-width-button">
-                            <i class="fas fa-cart-plus"> </i>
-                            Add to cart
-                        </button>
-                    </div>
-                    
-                </div>
+      <div class="card-container">
+        <div class="card" *ngFor="let product of products">
+          <img src="data:image/jpeg;base64,{{product.base64Image}}" class="card-img" alt="{{product.name}}">
+          <div class="card-body">
+            <h5 class="card-title">{{product.name}}</h5>
+            <p class="card-text">{{product.dosage}}</p>
+            <p class="card-text"><strong>${{product.price}}</strong></p>
+  
+            <div class="d-flex justify-content-center">
+              <button class="btn btn-success full-width-button" (click)="addToCart(product)">
+                <i class="fas fa-cart-plus"></i>
+                Add to cart
+              </button>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-
+  
     <div class="right-div">
-        <h4><i class="fas fa-shopping-cart"></i> Cart</h4>
-        <div class="cart-container">
-            <table class="table table-responsive table-striped border-dark">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Products</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                </tbody>
-            </table>
-        </div>
+      <h4 style="color: #fff;"><i class="fas fa-shopping-cart" style="color: #fff;"></i> Cart</h4>
+      <div class="cart-container">
+        <table class="table table-responsive table-striped border-dark">
+          <thead class="table-dark">
+            <tr>
+              <th>Products</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of cart">
+              <td>{{item.name}}</td>
+              <td>
+                <input type="number" min="1" max="100" step="1" [(ngModel)]="item.quantity" style="width: 50px; height:30px;">
+              </td>
+              <td>${{item.price * item.quantity}}</td>
 
-        <div class="cart-container1">
+              <td>
+                <button class="btn-danger" (click)="removeFromCart(item)">
+                    <i class="fa fa-trash-alt" style="color: white;"></i>
+                </button>
+              </td>
 
-            <h5>Total</h5>
-        </div>
-
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cart-container1">
+        <h5>Total: ${{ getTotal() }}</h5>
+      </div>
+      <button class="btn-checkout" (click)="printReceipt()">
+        <h6 style="color: #28a745; padding-top: 5px;">
+          CheckOut
+          <i class="fas fa-shopping-cart" style="color: #28a745;"></i>
+        </h6>
+      </button>
+      
     </div>
-    
-</div>
+  </div>
+  

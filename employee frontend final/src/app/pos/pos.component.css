@@ -20,7 +20,7 @@
 
 .right-div {
     flex: 2;
-    background-color: #d1e7dd; 
+    background-color: #28a745 ;
     overflow-y: auto; 
     margin: 0;
 }
@@ -52,7 +52,7 @@
 }
 .cart-container1 {
     background-color: white; 
-    height: 200px;
+    height: 150px;
     padding: 5px;
     margin-top: 5px;
     border-radius: 0.5rem; 
@@ -120,4 +120,29 @@
 
 .table-bordered {
     border: 1px solid #dee
+}
+
+.btn-danger{
+    padding: 4px;
+    font-size: 1rem;
+    border-radius: 4px;
+    background-color: red;
+    border-color: red;
+
+}
+
+.icon-white {
+    color: white;
+}
+
+.btn-checkout{
+    background-color: white;
+    border-color: white;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 7px;
+    width: 15rem;
+    font-size: 1rem;
 }

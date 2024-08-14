@@ -8,7 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { ProductComponent } from './product/product.component';
 import { PosComponent } from './pos/pos.component';
-  
+import { MessageComponent } from './message/message.component';
 
 const routes: Routes = [
 
@@ -20,7 +20,8 @@ const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'login',component:AdminLoginComponent},
   {path:'product',component:ProductComponent},
-  {path:'pos',component:PosComponent}
+  {path:'pos',component:PosComponent},
+  {path:"message",component:MessageComponent}
 ];
 
 @NgModule({

@@ -11,7 +11,7 @@ body {
 }
 
 .navbar {
-    background-color: black;
+    background-color: #0c7a26;
     color: white;
     padding: 1rem;
     position: sticky;
@@ -35,7 +35,7 @@ body {
 }
 
 .nav-link {
-    color: white;
+    color: #28a745;
     font-size: 1.5rem; /* Adjust icon size */
     text-decoration: none;
     display: block; /* Ensure links fill the width of the navbar */
@@ -44,12 +44,12 @@ body {
 }
 
 .nav-link.active {
-    background-color: #333; /* Active link background */
+    background-color: #ffffff; /* Active link background */
    
 }
 
 .nav-link.active i {
-    color: white; /* Change icon color to white when active */
+    color: #28a745; /* sa icon */
 }
 
 .nav-link i {
@@ -57,7 +57,7 @@ body {
 }
 
 main {
-    flex: 1; /* Take remaining space */
+    flex: 1; 
     padding: 1rem;
-    overflow-y: auto; /* Allow scrolling if content exceeds viewport */
+    overflow-y: auto; 
 }

@@ -23,6 +23,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductComponent } from './product/product.component';
 import { PosComponent } from './pos/pos.component';
+import { MessageComponent } from './message/message.component';
 
 
 
@@ -36,7 +37,8 @@ import { PosComponent } from './pos/pos.component';
          ShowDetailsComponent,
          AdminLoginComponent,
          ProductComponent,
-         PosComponent
+         PosComponent,
+         MessageComponent
   ],
   imports: [
     BrowserModule,
