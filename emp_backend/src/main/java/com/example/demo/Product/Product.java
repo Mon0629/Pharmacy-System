@@ -12,15 +12,17 @@ import jakarta.persistence.Column;
 public class Product {
 
     public Product() {}
-    public Product(String name, double price, String description, String category, String dosage) {
+    public Product(String name, double price, String description, String category, String dosage, int stock) {
         this.name = name;
         this.price = price;
         this.description = description;
         this.category = category;
         this.dosage = dosage;
+		this.stock = stock;
     }
 
-    @Id
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
@@ -39,6 +41,9 @@ public class Product {
 
     @Column(name = "dosage")
     private String dosage;
+
+    @Column(name = "stock")
+    private int stock;
 
     //--------------------------
     public int getId(){
@@ -99,4 +104,11 @@ public class Product {
     public void setImage(byte[] image) {
     this.image = image;
     }
+
+    public int getStock() {
+		return stock;
+	}
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
 }

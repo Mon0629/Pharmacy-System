@@ -7,16 +7,17 @@ public class ProductDTO {
     private String category;
     private String dosage;
     private String base64Image;
+	private int stock;
 
-    public ProductDTO() {}
 
-    public ProductDTO(String name, double price, String description, String category, String dosage, String base64Image) {
+	public ProductDTO(String name, double price, String description, String category, String dosage, String base64Image, int stock) {
         this.name = name;
         this.price = price;
         this.description = description;
         this.category = category;
         this.dosage = dosage;
         this.base64Image = base64Image;
+		this.stock = stock;
     }
 
     // Getters and setters
@@ -67,4 +68,12 @@ public class ProductDTO {
     public void setBase64Image(String base64Image) {
         this.base64Image = base64Image;
     }
+
+	public int getStock() {
+		return stock;
+	}
+
+    public void setStock(int stock) {
+		this.stock = stock;
+	}
 }
