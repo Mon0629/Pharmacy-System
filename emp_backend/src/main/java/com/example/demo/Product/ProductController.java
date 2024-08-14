@@ -18,7 +18,7 @@ public class ProductController {
     public List<ProductDTO> getAllProducts() {
         return productService.getAllProducts().stream().map(product -> {
             String base64Image = product.getImage() != null ? Base64.getEncoder().encodeToString(product.getImage()) : null;
-            return new ProductDTO(product.getName(), product.getPrice(), product.getDescription(), product.getCategory(), product.getDosage(), base64Image, product.getStock());
+            return new ProductDTO(product.getId(), product.getName(), product.getPrice(), product.getDescription(), product.getCategory(), product.getDosage(), base64Image, product.getStock());
         }).toList();
     }
 

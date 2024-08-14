@@ -1,16 +1,18 @@
 package com.example.demo.Product;
 
 public class ProductDTO {
+	private int id;
     private String name;
-    private double price;
-    private String description;
+
+	private double price;
+
+	private String description;
     private String category;
     private String dosage;
     private String base64Image;
-	private int stock;
-
-
-	public ProductDTO(String name, double price, String description, String category, String dosage, String base64Image, int stock) {
+    private int stock;
+    public ProductDTO(int id, String name, double price, String description, String category, String dosage, String base64Image, int stock) {
+		this.id = id;
         this.name = name;
         this.price = price;
         this.description = description;
@@ -19,6 +21,14 @@ public class ProductDTO {
         this.base64Image = base64Image;
 		this.stock = stock;
     }
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
     // Getters and setters
     public String getName() {
