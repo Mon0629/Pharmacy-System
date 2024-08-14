@@ -11,30 +11,24 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./update-employee.component.css']
 })
 export class UpdateEmployeeComponent {
-
-
-  
-  
-
-
     id: number;
   employee: Employee = new Employee();
-  
-  
+
+
   constructor(private employeeService: EmployeeService,
     private route: ActivatedRoute,
-    private router: Router) { 
+    private router: Router) {
       this.id=0
     }
-    //loading the data into form 
+    //loading the data into form
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
 
     this.employeeService.getEmployeeById(this.id).subscribe(data => {
       this.employee = data;
     }, error => console.log(error));
- 
- 
+
+
   }
 
   onSubmit(){

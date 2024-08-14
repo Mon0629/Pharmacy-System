@@ -6,7 +6,8 @@ export class Product {
     description: string;
     dosage: string;
     base64Image: string;
-  
+    stock: number;
+
     constructor(
       id: number,
       name: string,
@@ -14,7 +15,8 @@ export class Product {
       category: string,
       description: string,
       dosage: string,
-      base64Image?: string 
+      stock: number,
+      base64Image?: string
     ) {
       this.id = id;
       this.name = name;
@@ -22,7 +24,8 @@ export class Product {
       this.category = category;
       this.description = description;
       this.dosage = dosage;
-      this.base64Image = base64Image || ''; 
+      this.base64Image = base64Image || '';
+      this.stock = stock;
     }
   }
-  
+
